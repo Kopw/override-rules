@@ -117,6 +117,7 @@ function buildBaseLists({ landing, lowCost, countryGroupNames }) {
     // 默认的代理列表，用于大多数策略组
     const defaultProxies = buildList(
         PROXY_GROUPS.SELECT,
+        landing && PROXY_GROUPS.LANDING,
         countryGroupNames,
         lowCost && PROXY_GROUPS.LOW_COST,
         PROXY_GROUPS.MANUAL,
@@ -126,6 +127,7 @@ function buildBaseLists({ landing, lowCost, countryGroupNames }) {
     // “直连”优先的代理列表
     const defaultProxiesDirect = buildList(
         PROXY_GROUPS.DIRECT,
+        landing && PROXY_GROUPS.LANDING,
         countryGroupNames,
         lowCost && PROXY_GROUPS.LOW_COST,
         PROXY_GROUPS.SELECT,

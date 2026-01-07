@@ -4,7 +4,7 @@ https://github.com/powerfullz/override-rules
 
 支持的传入参数：
 - loadbalance: 启用负载均衡（url-test/load-balance，默认 false）
-- landing: 启用落地节点功能（如机场家宽/星链/落地分组，默认 false）
+- landing: 启用落地节点功能（如机场家宽/星链/落地分组，默认 true）
 - ipv6: 启用 IPv6 支持（默认 false）
 - full: 输出完整配置（适合纯内核启动，默认 false）
 - keepalive: 启用 tcp-keep-alive（默认 false）
@@ -52,7 +52,11 @@ function buildFeatureFlags(args) {
     };
 
     const flags = Object.entries(spec).reduce((acc, [sourceKey, targetKey]) => {
-        acc[targetKey] = parseBool(args[sourceKey]) || false;
+        if (targetKey === 'landing' && args[sourceKey] === undefined) {
+            acc[targetKey] = true;
+        } else {
+            acc[targetKey] = parseBool(args[sourceKey]) || false;
+        }
         return acc;
     }, {});
 

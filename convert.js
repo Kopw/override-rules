@@ -558,7 +558,6 @@ function buildProxyGroups({
             "type": "select",
             "include-all": true,
             "filter": "(?i)家宽|家庭|家庭宽带|商宽|商业宽带|星链|Starlink|落地",
-            "proxies": defaultProxies,
         } : null,
         {
             "name": PROXY_GROUPS.FALLBACK,

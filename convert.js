@@ -263,12 +263,12 @@ const baseRules = [
   "GEOSITE,TELEGRAM,Telegram",
   "GEOSITE,YOUTUBE,YouTube",
   "GEOSITE,GOOGLE,Google",
+  "GEOSITE,REDDIT,Reddit",
   "GEOSITE,NETFLIX,Netflix",
   "GEOSITE,SPOTIFY,Spotify",
   "GEOSITE,BAHAMUT,Bahamut",
   "GEOSITE,BILIBILI,Bilibili",
   `GEOSITE,MICROSOFT@CN,${PROXY_GROUPS.DIRECT}`,
-  "GEOSITE,REDDIT,Reddit",
   "GEOSITE,PIKPAK,PikPak",
   `GEOSITE,GFW,${PROXY_GROUPS.SELECT}`,
   `GEOSITE,CN,${PROXY_GROUPS.DIRECT}`,
@@ -601,6 +601,12 @@ function buildProxyGroups({
       proxies: defaultProxies,
     },
     {
+      name: "Reddit",
+      icon: "https://gcore.jsdelivr.net/gh/powerfullz/override-rules@master/icons/Reddit.png",
+      type: "select",
+      proxies: defaultProxies,
+    },
+    {
       name: "Microsoft",
       icon: "https://gcore.jsdelivr.net/gh/powerfullz/override-rules@master/icons/Microsoft_Copilot.png",
       type: "select",
@@ -678,12 +684,7 @@ function buildProxyGroups({
       type: "select",
       proxies: defaultProxies,
     },
-    {
-      name: "Reddit",
-      icon: "https://gcore.jsdelivr.net/gh/powerfullz/override-rules@master/icons/Reddit.png",
-      type: "select",
-      proxies: defaultProxies,
-    },
+
     {
       name: "PikPak",
       icon: "https://gcore.jsdelivr.net/gh/powerfullz/override-rules@master/icons/PikPak.png",

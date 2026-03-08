@@ -602,7 +602,7 @@ function buildProxyGroups({
     },
     {
       name: "Reddit",
-      icon: "https://gcore.jsdelivr.net/gh/powerfullz/override-rules@master/icons/Reddit.png",
+      icon: "https://gcore.jsdelivr.net/gh/Kopw/override-rules@master/icons/Reddit_Logo_Icon.svg.png",
       type: "select",
       proxies: defaultProxies,
     },
